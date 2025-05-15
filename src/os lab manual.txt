@@ -507,7 +507,7 @@ P0 -> P1 -> P3 -> P4 -> P2
 
 #include<stdio.h>
 #define max 25
-void main()
+int main()
 {
 int frag[max],b[max],f[max],i,j,nb,nf; 
 static int bf[max],ff[max];
@@ -543,12 +543,11 @@ break;
 }
 
 printf("\nFile_no:\tFile_size:\tBlock_no:\tBlock_size:\tFragement");
-for(i=1;i<=nf;i++)
+for(i=1;i<=nf;i++){
 printf("\n%d\t\t%d\t\t%d\t\t%d\t\t%d",i+1,f[i],ff[i],b[ff[i]],frag[i]);
 }
 }
-return 0;
-}
+
 
 INPUT
 Enter the number of blocks: 3
